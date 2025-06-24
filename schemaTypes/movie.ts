@@ -8,6 +8,23 @@ export default defineType({
   icon,
   fields: [
     defineField({
+      type: 'image',
+      name: 'articleImage',
+      fields: [
+        defineField({
+          type: 'text',
+          name: 'alt',
+          title: 'Alternative text',
+          rows: 2,
+        }),
+      ],
+      options: {
+        aiAssist: {
+          imageDescriptionField: 'alt',
+        },
+      },
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -35,10 +52,21 @@ export default defineType({
       name: 'poster',
       title: 'Poster Image',
       type: 'image',
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'alt text',
+          type: 'string',
+        }),
+      ],
       options: {
         hotspot: true,
+        aiAssist: {
+          imageDescriptionField: 'alt',
+        },
       },
     }),
+
     defineField({
       name: 'externalId',
       title: 'External ID',

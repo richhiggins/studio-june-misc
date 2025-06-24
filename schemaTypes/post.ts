@@ -2,6 +2,7 @@ import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'post',
+  title: 'Landing Page',
   type: 'document',
   fields: [
     defineField({
@@ -32,6 +33,7 @@ export default defineType({
         defineArrayMember({
           type: 'reference',
           to: [{type: 'sharedBanner'}],
+          title: 'Shared Banner',
         }),
       ],
     }),
@@ -40,5 +42,13 @@ export default defineType({
       type: 'string',
       hidden: true,
     }),
+    defineField({
+      name: 'market',
+      type: 'string',
+      hidden: true,
+    }),
   ],
+  preview: {
+    select: {title: 'title', subtitle: 'language'},
+  },
 })

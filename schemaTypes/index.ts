@@ -6,17 +6,15 @@ import person from './person'
 import screening from './screening'
 import plotSummary from './plotSummary'
 import plotSummaries from './plotSummaries'
+import landingPage from './landingPage'
+import hero from './hero'
+import heroDocIntl from './heroDocIntl'
+import post from './post'
+import banner from './banner'
+import sharedBanner from './sharedBanner'
+import sharedBannerFieldIntl from './sharedBannerFieldIntl'
+import heroFieldIntl from './heroFieldIntl'
 
-export const schemaTypes = [
-  // Document types
-  movie,
-  person,
-  screening,
+export const schemaTypes = [hero, post, banner, sharedBanner]
 
-  // Other types
-  blockContent,
-  plotSummary,
-  plotSummaries,
-  castMember,
-  crewMember,
-]
+export const schemaTypesFieldLevel = [landingPage, heroFieldIntl, sharedBannerFieldIntl]
