@@ -8,7 +8,7 @@ import {documentInternationalization} from '@sanity/document-internationalizatio
 import {assist} from '@sanity/assist'
 import {structure} from './structure/structure'
 import {fieldStructure} from './structure/structure-field-li8n'
-import {MyLogo} from './myLogo'
+import MyLogo from './myLogo'
 
 export default defineConfig([
   /*{
@@ -53,7 +53,6 @@ export default defineConfig([
   },
   */
   {
-    // @ts-ignore
     icon: MyLogo,
     name: 'eu',
     title: 'Puma EU Store',
