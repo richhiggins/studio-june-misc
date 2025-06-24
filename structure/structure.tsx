@@ -77,7 +77,7 @@ export const structure: StructureResolver = (S) =>
               S.listItem().title(`All languages`).schemaType('post').child(
                 S.documentList()
                   .id(`all-posts`)
-                  .title(`All languages`)
+                  .title(`All Landing Pages`)
                   .schemaType('post')
                   .filter('_type == "post" && market == "eu"'),
                 //                    .apiVersion(SANITY_API_VERSION)
@@ -134,7 +134,7 @@ export const structure: StructureResolver = (S) =>
               S.listItem().title(`All languages`).schemaType('post').child(
                 S.documentList()
                   .id(`all-shared-banners`)
-                  .title(`All languages`)
+                  .title(`All Shared Components`)
                   .schemaType('sharedBanner')
                   .filter('_type == "sharedBanner" && market == "eu"'),
                 //                    .apiVersion(SANITY_API_VERSION)

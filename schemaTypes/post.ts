@@ -20,7 +20,7 @@ export default defineType({
     defineField({
       name: 'pageBuilder',
       type: 'array',
-      title: 'Page builder',
+      title: 'Components',
       of: [
         defineArrayMember({
           name: 'banner',
@@ -32,7 +32,24 @@ export default defineType({
         }),
         defineArrayMember({
           type: 'reference',
-          to: [{type: 'sharedBanner'}],
+          to: [
+            {
+              type: 'sharedBanner',
+            },
+          ],
+          options: {
+            filter: ({document}) => {
+              if (!document.language) {
+                return {
+                  filter: '!defined(language)',
+                }
+              }
+              return {
+                filter: `language == $language`,
+                params: {language: document.language},
+              }
+            },
+          },
           title: 'Shared Banner',
         }),
       ],
