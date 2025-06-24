@@ -146,7 +146,28 @@ export default defineConfig([
           {id: 'cs', title: 'Czech'},
           {id: 'sv', title: 'Swedish'},
         ],
+        defaultLanguages: ['en'],
         fieldTypes: ['string', 'text'],
+      }),
+      assist({
+        translate: {
+          field: {
+            documentTypes: ['landingPage', 'heroFieldIntl', 'sharedBannerFieldIntl'],
+            languages: [
+              {id: 'en', title: 'English'},
+              {id: 'de', title: 'German'},
+              {id: 'fr', title: 'French'},
+              {id: 'it', title: 'Italian'},
+              {id: 'es', title: 'Spanish'},
+              {id: 'nl', title: 'Dutch'},
+              {id: 'fi', title: 'Finnish'},
+              {id: 'pt', title: 'Portuguese'},
+              {id: 'pl', title: 'Polish'},
+              {id: 'cs', title: 'Czech'},
+              {id: 'sv', title: 'Swedish'},
+            ],
+          },
+        },
       }),
     ],
 

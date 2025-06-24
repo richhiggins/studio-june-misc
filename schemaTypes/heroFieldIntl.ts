@@ -20,6 +20,13 @@ export default defineType({
           title: 'Alternative text',
         }),
       ],
+      /*
+        // not sure how to enable with field intl plugin
+      options: {
+        aiAssist: {
+          imageDescriptionField: 'alt',
+        },
+      },*/
     }),
   ],
   preview: {

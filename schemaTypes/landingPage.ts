@@ -30,7 +30,6 @@ export default defineType({
           title: 'Shared Banner',
         }),
       ],
-      description: 'Array of page components with field level localisation.',
     }),
   ],
   preview: {
